@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz</title>
+</head>
+<body class="bg-emerald-300 p-4">
+
+<div>
+<p class="text-3xl flex mx-auto justify-center items-center">Quiz</p>
+<hr class="border-1 border-white">
+</div>
+
+<!-- Enter name -->  
+<div class="flex flex-col justify-center mx-auto rounded items-center mt-72 border-white border-2 p-6 gap-y-4 md:w-96 lg:w-96 xl:w-96" id="input" >
+    <input type="text" id="input1" class=" border-2 border-white rounded bg-transparent h-9 w-full placeholder:text-stone-800 p-2" placeholder="Enter name to start...."  >
+    <button onclick="showquiz()" id="start" class="font-semibold border-2 w-auto pr-4 pl-4 pt-1 pb-1 border-white hover:bg-white rounded">Start</button>
+
+</div>
+
+
+<!-- Quiz Question -->
+    <div class="flex flex-col justify-center items-center mx-auto rounded bg-white mt-56 p-4" style="display: none;" id="quizblock">
+        <div class="pb-3 text-lg font-sans ">
+            <h5 id="ques">Questions</h5>
+        </div>
+
+        <div id="ansbox" class="flex flex-col gap-y-3 pb-5">
+        <div >
+            <input  type="radio" value="ans1" id="ans1" name="option" class="option mr-2 answer">
+           <label for="ans1"  class="option1" id="option1">Option 1</label>
+        </div>
+
+        <div>
+            <input   type="radio" value="ans2" id="ans2" name="option" class="option mr-2 answer"> 
+           <label for="ans2" class="option" id="option2" >Option 2
+           </label>
+        </div>
+
+        <div>
+            <input  type="radio"  value="ans3" id="ans3" name="option" class="option mr-2 answer">
+           <label for="ans3" class="option" id="option3">Option 3
+           </label>
+        </div>
+
+        <div>
+            <input  type="radio" value="ans4" id="ans4" name="option" class="option mr-2 answer">
+           <label for="ans4" class="option" id="option4">Option 4
+           </label>
+        </div>
+    </div>
+    <button class="flex justify-center items-center rounded mx-auto border-2 border-black w-fit pr-7 pl-7 pt-1 pb-1 hover:bg-black hover:text-white" id="next" onclick="nextque()">Next</button>
+<p id="page"></p>
+
+    </div>
+
+<!-- Result -->
+    <div class="bg-white p-4 flex flex-col rounded mt-60 space-y-4" id="resblock" style="display: none;">
+        <p class="flex justify-center items-center text-red-600" id="yay"></p>
+        <div id="score"  class="score1  flex justify-center items-center  mx-auto ">Result</div>
+        <p class="flex justify-center items-center text-red-600">Refresh to give again.</p>
+    </div>
+    
+    <div class=" mt-[415px] mb-0">
+        <hr class="flex justify-center items-center mx-auto border-1 border-white w-28">
+        <p class=" flex flex-col mx-auto  justify-center items-center">Made by
+            <span class="text-lg font-semibold" >Akarsh Srivastava</span></p>
+        </div>
+
+    <script src="questoins.js">
+    </script>
+</body>
+</html>
