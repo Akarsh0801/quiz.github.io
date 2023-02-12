@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Quiz</title>
 </head>
-<body class="bg-emerald-300 p-4">
+<body class="bg-emerald-300 h-screen p-4">
 
 <div>
 <p class="text-3xl flex mx-auto justify-center items-center">Quiz</p>
@@ -23,7 +23,7 @@
 
 
 <!-- Quiz Question -->
-    <div class="flex flex-col justify-center items-center mx-auto rounded bg-white mt-56 p-4" style="display: none;" id="quizblock">
+    <div class="flex flex-col justify-center items-center mx-auto rounded bg-white mt-56 p-4 xl:w-1/2 lg:w-1/2" style="display: none;" id="quizblock">
         <div class="pb-3 text-lg font-sans ">
             <h5 id="ques">Questions</h5>
         </div>
@@ -58,7 +58,7 @@
     </div>
 
 <!-- Result -->
-    <div class="bg-white p-4 flex flex-col rounded mt-60 space-y-4" id="resblock" style="display: none;">
+    <div class="bg-white p-16  flex flex-col rounded mt-60 space-y-4" id="resblock" style="display: none;">
         <p class="flex justify-center items-center text-red-600" id="yay"></p>
         <div id="score"  class="score1  flex justify-center items-center  mx-auto ">Result</div>
         <p class="flex justify-center items-center text-red-600">Refresh to give again.</p>
